@@ -14,13 +14,13 @@ namespace DBMT.Pages.cs
         {
             Thread.Sleep(6000);
                 
-            IWebElement GoTohomeButton = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/header/div/div[1]/button/div"));
-            GoTohomeButton.Click();
+            //IWebElement GoTohomeButton = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/header/div/div[1]/button/div"));
+            //GoTohomeButton.Click();
 
             // WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div/div[2]/p", 23);
             Thread.Sleep(7000);
-            IWebElement GoToEvSection = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[1]/div[2]/h5"));
-            GoToEvSection.Click();//*[@id="root"]/div/nav/div/div/div[2]/div/ul[2]/div/div[2]
+            IWebElement GoToEvSection = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div/div[2]"));
+            GoToEvSection.Click();
 
             //WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[2]/div[2]/p", 23);
 
@@ -28,7 +28,7 @@ namespace DBMT.Pages.cs
             //GoToEvForm.Click();//*[@id="root"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[1]/div[2]
 
             Thread.Sleep(6000);
-            IWebElement EvList = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[1]/div[2]/h5"));
+            IWebElement EvList = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[1]/div[2]"));
             EvList.Click();
         }
 

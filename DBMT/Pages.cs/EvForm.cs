@@ -12,7 +12,9 @@ namespace DBMT.Pages.cs
     {
         public void CreateEvForm(IWebDriver driver)
         {
-
+            Thread.Sleep(1000);
+            IWebElement AddNewEv = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/main/div[2]/div[1]/div[2]/a"));
+            AddNewEv.Click();
 
             WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"outlined-adornment-manufacturer-login\"]", 20);
             IWebElement GoToManufacturer = driver.FindElement(By.XPath("//*[@id=\"outlined-adornment-manufacturer-login\"]"));
@@ -100,7 +102,7 @@ namespace DBMT.Pages.cs
             //IWebElement GoToRow = driver.FindElement(By.XPath("//*[@id=\"MUIDataTableBodyRow-021980235962757066-0\"]/td[1]/div[2]"));
             //GoToRow.Click();
 
-            Thread.Sleep(7000);
+            Thread.Sleep(3000);
             IWebElement GoToActions = driver.FindElement(By.XPath("//*[@id=\"action-menu-icon-99\"]"));
             GoToActions.Click();
 
@@ -112,9 +114,10 @@ namespace DBMT.Pages.cs
             Thread.Sleep(7000);
             //WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"outlined-adornment-range-login\"]", 17);
             IWebElement EditWLTP = driver.FindElement(By.XPath("//*[@id=\"outlined-adornment-range-login\"]"));
+            EditWLTP.Clear();
             EditWLTP.SendKeys("337");
 
-            Thread.Sleep(7000);
+            Thread.Sleep(2000);
             //WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"root\"]/div/main/div/div[2]/form/div[3]/button", 20);
             IWebElement saveButton = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/main/div/div[2]/form/div[3]/button"));
             saveButton.Click();
@@ -141,7 +144,7 @@ namespace DBMT.Pages.cs
 
             Thread.Sleep(3000);
             //WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"MUIDataTableBodyRow-03887055798791743-0\"]/td[12]/div[2]/div/button", 20);
-            IWebElement GoToDelete = driver.FindElement(By.XPath("//*[@id=\"action-menu-97\"]/div[3]/ul/li/div[2]"));
+            IWebElement GoToDelete = driver.FindElement(By.XPath("//*[@id=\"action-menu-99\"]/div[3]/ul/li/div[2]"));
             GoToDelete.Click();
             driver.SwitchTo().Alert().Accept();
 
