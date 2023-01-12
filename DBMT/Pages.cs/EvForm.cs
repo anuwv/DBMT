@@ -53,6 +53,8 @@ namespace DBMT.Pages.cs
             IWebElement UnBraked = driver.FindElement(By.XPath("//*[@id=\"outlined-adornment-towRateUnBraked-login\"]"));
             UnBraked.SendKeys("1800");
 
+
+
             WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"root\"]/div/main/div[2]/div[2]/form/div[3]/button", 23);
             IWebElement SaveButton = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/main/div[2]/div[2]/form/div[3]/button"));
             SaveButton.Click();
@@ -72,15 +74,16 @@ namespace DBMT.Pages.cs
 
             //IWebElement GoToEvForm = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[2]/div[2]/p"));
             //GoToEvForm.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             //IWebElement EvList = driver.FindElement(By.XPath("//*[@id=\"root\"]/div/nav/div/div/div[2]/div/ul[2]/div[2]/div/div/div/a[1]/div[2]"));
             //EvList.Click();
-            IWebElement GoToActions = driver.FindElement(By.XPath("//*[@id=\"action-menu-icon-99\"]"));
+
+            IWebElement GoToActions = driver.FindElement(By.XPath("//*[@id=\"action-menu-icon-102\"]"));
             GoToActions.Click();
 
             //WaitHelpers.WaitToBeClickable(driver, "XPath", "//*[@id=\"MUIDataTableBodyRow-06434022865823465-0\"]/td[12]/div[2]/div/a[1]/svg/path", 12);
             Thread.Sleep(3000);
-            IWebElement GoToViewButton = driver.FindElement(By.XPath("//*[@id=\"action-menu-99\"]/div[3]/ul/a[2]/div[1]"));
+            IWebElement GoToViewButton = driver.FindElement(By.XPath("//*[@id=\"action-menu-102\"]/div[3]/ul/a[2]/div[1]"));
             GoToViewButton.Click();
         }
         public void EditEvForm(IWebDriver driver)
@@ -102,13 +105,13 @@ namespace DBMT.Pages.cs
             //IWebElement GoToRow = driver.FindElement(By.XPath("//*[@id=\"MUIDataTableBodyRow-021980235962757066-0\"]/td[1]/div[2]"));
             //GoToRow.Click();
 
-            Thread.Sleep(3000);
-            IWebElement GoToActions = driver.FindElement(By.XPath("//*[@id=\"action-menu-icon-99\"]"));
+            Thread.Sleep(5000);
+            IWebElement GoToActions = driver.FindElement(By.XPath("//*[@id=\"action-menu-icon-102\"]"));
             GoToActions.Click();
 
             Thread.Sleep(5000);
             
-            IWebElement GoToEditIcon = driver.FindElement(By.XPath("//*[@id=\"action-menu-99\"]/div[3]/ul/a[1]"));
+            IWebElement GoToEditIcon = driver.FindElement(By.XPath("//*[@id=\"action-menu-102\"]/div[3]/ul/a[1]/div[2]"));
             GoToEditIcon.Click();
 
             Thread.Sleep(7000);
